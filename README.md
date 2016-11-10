@@ -1,4 +1,4 @@
- W#MiI Mobile App
+#WMiI Mobile App
 
 ## Working with source control
 1. Clone the repository (`git clone https://github.com/cmorawski96/wmiimobileapp.git`)
