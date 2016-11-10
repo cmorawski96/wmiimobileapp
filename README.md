@@ -1,4 +1,4 @@
-# WMiI Mobile App
+ W#MiI Mobile App
 
 ## Working with source control
 1. Clone the repository (`git clone https://github.com/cmorawski96/wmiimobileapp.git`)
@@ -10,3 +10,4 @@
 7. Push a commit to the remote repository (means this one) using `git push origin master`
 8. To pull changes from other collaborators use `git pull origin master`
 9. In case of *merge conflict*, email sobak[at]sobak.pl or pray to God
+10. Feel free to use this readme to help your collaborators at their projects
