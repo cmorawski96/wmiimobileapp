@@ -12,6 +12,6 @@
 9. In case of *merge conflict*, email sobak[at]sobak.pl or pray to God
 10. Feel free to use this readme to help your collaborators at their projects
 
-Autors:
-Dariusz Kowalczyk
-Cezary Morawski
+## Authors:
+1. Dariusz Kowalczyk
+2. Cezary Morawski
