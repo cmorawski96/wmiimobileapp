@@ -1,4 +1,4 @@
- W#MiI Mobile App
+#WMiI Mobile App
 
 ## Working with source control
 1. Clone the repository (`git clone https://github.com/cmorawski96/wmiimobileapp.git`)
@@ -11,3 +11,7 @@
 8. To pull changes from other collaborators use `git pull origin master`
 9. In case of *merge conflict*, email sobak[at]sobak.pl or pray to God
 10. Feel free to use this readme to help your collaborators at their projects
+
+## Authors:
+1. Dariusz Kowalczyk
+2. Cezary Morawski
