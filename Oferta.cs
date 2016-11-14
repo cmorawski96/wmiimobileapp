@@ -26,6 +26,14 @@ namespace projekt
             mItems = new List<Produkt>();
             AddProdukt("koszulka", "2.50", "KOLOROWA", "tak");
             AddProdukt("glowa", "3.20", "Pusta", "nie");
+            AddProdukt("glowa", "3.20", "Pusta", "nie");
+            AddProdukt("glowa", "3.20", "Pusta", "nie");
+            AddProdukt("glowa", "3.20", "Pusta", "nie");
+            AddProdukt("glowa", "3.20", "Pusta", "nie");
+            AddProdukt("glowa", "3.20", "Pusta", "nie");
+            AddProdukt("glowa", "3.20", "Pusta", "nie");
+            AddProdukt("glowa", "3.20", "Pusta", "nie");
+            AddProdukt("glowa", "3.20", "Pusta", "nie");
 
             MyFirstViewAdapter adapter = new MyFirstViewAdapter(this, mItems);
             mListView.Adapter = adapter;
