@@ -2,5 +2,6 @@
 bin/
 obj/
 *.sln
-*.user
+projekt.csproj.bak
+projekt.csproj.user
 GettingStarted.Xamarin
