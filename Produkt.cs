@@ -9,10 +9,13 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics;
+using System.Net;
+using Android.Transitions;
 
 namespace projekt
 {
-    public class ProductDTO
+    public class Produkt
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -21,6 +24,7 @@ namespace projekt
         public decimal Price { get; set; }
     }
 
+    /* test produkt
     class Produkt
     {
         public string Nazwa { get; set; }
@@ -28,25 +32,21 @@ namespace projekt
         public string Opis { get; set; }
         public string Dostepne { get; set; }
         public ImageView ZdjProduktu { get; set; }
-        
-
-
+   
         public Produkt(string nazwa, string cena, string opis, string dostepne)
         {
             this.Nazwa = nazwa;
             this.Cena = cena;
             this.Opis = opis;
             this.Dostepne = dostepne;
-            
-
         }
     }
-
+    */
     class MyFirstViewAdapter : BaseAdapter<Produkt>
     {
         public List<Produkt> mItems;
         private Context mContext;
-
+        public View row;
         public MyFirstViewAdapter(Context context, List<Produkt> items)
         {
             mItems = items;
@@ -66,27 +66,39 @@ namespace projekt
         }
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            View row = convertView;
+            row = convertView;
             if (row == null)
             {
                 row = LayoutInflater.From(mContext).Inflate(Resource.Layout.ListProdukt_Row, null, false);
             }
 
-            TextView Nazwa = row.FindViewById<TextView>(Resource.Id.txtNazwa);
-            Nazwa.Text = mItems[position].Nazwa;
+            Set_Text(mItems[position].Name, row.FindViewById<TextView>(Resource.Id.txtNazwa));
+            Set_Text(mItems[position].Price, row.FindViewById<TextView>(Resource.Id.txtCena));
+            Set_Text(mItems[position].Description, row.FindViewById<TextView>(Resource.Id.txtOpis));
+            Set_Text(mItems[position].PictureUrl, row.FindViewById<TextView>(Resource.Id.txtDokladnosc));
+            Set_Image(mItems[position].PictureUrl, row.FindViewById<ImageView>(Resource.Id.ImageProdukt));
 
-            TextView Cena = row.FindViewById<TextView>(Resource.Id.txtCena);
-            Cena.Text = mItems[position].Cena;
-
-            TextView Opis = row.FindViewById<TextView>(Resource.Id.txtOpis);
-            Opis.Text = mItems[position].Opis;
-
-            TextView Dokladnosc = row.FindViewById<TextView>(Resource.Id.txtDokladnosc);
-            Dokladnosc.Text = mItems[position].Dostepne;
-
-            ImageView ZdjProduktu = row.FindViewById<ImageView>(Resource.Id.ImageProdukt);
-            ZdjProduktu = mItems[position].ZdjProduktu;
             return row;
+        }
+        protected void Set_Text(object text, TextView textview)
+        {
+            textview.Text = Convert.ToString(text); 
+        }
+        protected void Set_Image(string url, ImageView imageview)
+        {
+            if(url != null)
+            {
+                Bitmap imageBitmap = null;
+                using (var webClient = new WebClient())
+                {
+                    var imageBytes = webClient.DownloadData(url);
+                    if (imageBytes != null && imageBytes.Length > 0)
+                    {
+                        imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);  
+                        imageview.SetImageBitmap(imageBitmap);
+                    }
+                }
+            }
         }
     }
 }

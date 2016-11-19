@@ -63,17 +63,29 @@ namespace projekt
 			// aapt resource value: 0x7f050001
 			public const int ImageProdukt = 2131034113;
 			
-			// aapt resource value: 0x7f05000d
-			public const int button_koszyk = 2131034125;
+			// aapt resource value: 0x7f05000e
+			public const int Rozmiar = 2131034126;
 			
-			// aapt resource value: 0x7f05000c
-			public const int button_oferta = 2131034124;
+			// aapt resource value: 0x7f05000f
+			public const int button1 = 2131034127;
+			
+			// aapt resource value: 0x7f050010
+			public const int button2 = 2131034128;
+			
+			// aapt resource value: 0x7f050012
+			public const int button_koszyk = 2131034130;
+			
+			// aapt resource value: 0x7f050011
+			public const int button_oferta = 2131034129;
 			
 			// aapt resource value: 0x7f050007
 			public const int editText1 = 2131034119;
 			
 			// aapt resource value: 0x7f050009
 			public const int editText2 = 2131034121;
+			
+			// aapt resource value: 0x7f05000c
+			public const int imageView1 = 2131034124;
 			
 			// aapt resource value: 0x7f05000b
 			public const int listaProdukt = 2131034123;
@@ -86,6 +98,9 @@ namespace projekt
 			
 			// aapt resource value: 0x7f050006
 			public const int textView2 = 2131034118;
+			
+			// aapt resource value: 0x7f05000d
+			public const int textView3 = 2131034125;
 			
 			// aapt resource value: 0x7f050003
 			public const int txtCena = 2131034115;
@@ -128,7 +143,10 @@ namespace projekt
 			public const int Oferta = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int Panel_Menu = 2130903044;
+			public const int Opcje_oferty = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int Panel_Menu = 2130903045;
 			
 			static Layout()
 			{
