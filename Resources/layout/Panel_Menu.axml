@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/button_oferta" />
     <Button
-        android:text="Button"
+        android:text="Koszyk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button_koszyk" />

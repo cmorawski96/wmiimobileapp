@@ -58,7 +58,6 @@
     <Compile Include="Koszyk.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Oferta.cs" />
-    <Compile Include="Opcje_oferty.cs" />
     <Compile Include="Panel_Menu.cs" />
     <Compile Include="Produkt.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -68,9 +67,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
-    <AndroidResource Include="Resources\layout\Opcje_oferty.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
@@ -80,10 +76,13 @@
     <AndroidResource Include="Resources\layout\Oferta.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\Koszyk.axml">
+    <AndroidResource Include="Resources\layout\Koszyk_Row.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ListProdukt_Row.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Koszyk.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -25,55 +25,42 @@ namespace projekt
 
             #region Rest i ladowanie listy
             mListView = FindViewById<ListView>(Resource.Id.listaProdukt);
+            #region /************ REST ****************
+            /*
             REST lista = new REST(context);
             if (lista.listaP == null)
             {
                 lista.listaP.Add(new Produkt());
                 lista.listaP[0].Name = "brak elementow";
             }
-            #region testy
-            /* Do testow listy
-                        mItems = new List<Produkt>();
-                        AddProdukt("koszulka", "2.50", "KOLOROWA", "tak");
-                        AddProdukt("glowa", "3.20", "Pusta", "nie");
-                        AddProdukt("glowa", "3.20", "Pusta", "nie");
-                        AddProdukt("glowa", "3.20", "Pusta", "nie");
-                        AddProdukt("glowa", "3.20", "Pusta", "nie");
-                        AddProdukt("glowa", "3.20", "Pusta", "nie");
-                        AddProdukt("glowa", "3.20", "Pusta", "nie");
-                        AddProdukt("glowa", "3.20", "Pusta", "nie");
-                        AddProdukt("glowa", "3.20", "Pusta", "nie");
-                        AddProdukt("glowa", "3.20", "Pusta", "nie");
             */
+            #endregion//******************************
+
+            #region testy
+             //Do testow listy
+               List<Produkt> mItems = new List<Produkt>();
+               mItems.Add(new Produkt("koszulka", 2, "KOLOROWA", null));
+               mItems.Add(new Produkt("glowa", 3, "Pusta", null));
+               mItems.Add(new Produkt("glowa", 3, "Pusta", null));
+               mItems.Add(new Produkt("glowa", 3, "Pusta", null));
+               mItems.Add(new Produkt("glowa", 3, "Pusta", null));
+               mItems.Add(new Produkt("glowa", 3, "Pusta", null));
+               mItems.Add(new Produkt("glowa", 3, "Pusta", null));
+               
+            MyFirstViewAdapter adapter = new MyFirstViewAdapter(this, mItems, Resource.Layout.Oferta);
             #endregion
-            MyFirstViewAdapter adapter = new MyFirstViewAdapter(this, lista.listaP);
+            //MyFirstViewAdapter adapter = new MyFirstViewAdapter(this, lista.listaP);
+        
             mListView.Adapter = adapter;
             #endregion
            
+           // mListView.ItemClick += delegate{adapter.przycisk_odkryj();};
 
+           // adapter.mItems[0].Name
 
-
-            mListView.ItemClick += delegate
-            {
-
-                FragmentTransaction tranzakcja = FragmentManager.BeginTransaction();
-                Okienko_oferty okienko = new Okienko_oferty();
-
-
-
-                
-
-                //spinner.Adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerDropDownItem, rozmiar);
-                okienko.Show(tranzakcja, "komunikat");
-
-            };
- 
-
-         
-           
             // Create your application here
         }
-
+        /*
         public void kliknij_okienko(object sender, EventArgs e)
         {
             FragmentTransaction tranzakcja = FragmentManager.BeginTransaction();
@@ -85,11 +72,9 @@ namespace projekt
             Spinner spinner = FindViewById<Spinner>(Resource.Id.Rozmiar);
             var rozmiar = new string[] { "M", "L", "XL", "XXL" };
             spinner.Adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerDropDownItem, rozmiar);
-        }
-        /* Do testow listy
-        void AddProdukt(string nazwa, string cena, string opis, string dostepne)
-        {
-            mItems.Add(new Produkt(nazwa, cena, opis, dostepne));
         }*/
+
+        /* Do testow listy */
+
     }
 }
