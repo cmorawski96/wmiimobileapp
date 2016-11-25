@@ -52,7 +52,7 @@ namespace projekt
         {
             suma -= produkt.Price;
             lista.Remove(produkt);
-            text_suma
+           // text_suma
         }
         public static bool czy_pusty()
         {
