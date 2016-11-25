@@ -52,7 +52,7 @@ namespace projekt
                     R_l_Oferta(position);
                     Button przycisk = row.FindViewById<Button>(Resource.Id.Dodaj_do_koszyka);
                     przycisk.Visibility = ViewStates.Gone;
-                    przycisk.Click += delegate { Okienko(position); };
+                    przycisk.Click += delegate { Okienko_Dodaj(position); };
                     row.Click += delegate
                     {
                         if (przycisk.Visibility == ViewStates.Gone)
@@ -71,9 +71,11 @@ namespace projekt
                 if (row == null)
                 {
                     row = LayoutInflater.From(mContext).Inflate(Resource.Layout.Koszyk_Row, null, false);
+                    R_l_Koszyk(position);
+                    Button przycisk = row.FindViewById<Button>(Resource.Id.kosz_del);
+                    przycisk.Click += delegate{ Okienko_Usun(position); };
+                    
                 }
-                R_l_Koszyk(position);
-                
             }
            
             return row;
@@ -99,22 +101,38 @@ namespace projekt
                 }
             }
         }
-        public void Okienko(int position)
+        protected void Okienko_Dodaj(int position)
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
             AlertDialog alertDialog = builder.Create();
             alertDialog.SetTitle("Czy chcesz dodaæ produkt do koszyka?");
             alertDialog.SetMessage(mItems[position].Name + "\nCena: " + mItems[position].Price);
-            alertDialog.SetButton2("Tak", (s, ev) => { Kosz.lista.Add(mItems[position]); alertDialog.Cancel(); });
+            alertDialog.SetButton2("Tak", (s, ev) => { Kosz.Add_produkt(mItems[position]); alertDialog.Cancel(); });
             alertDialog.SetButton("Nie", (s, ev) => { alertDialog.Cancel(); });
             alertDialog.Show();
+        }
+        protected void Okienko_Usun(int position)
+        {
+            try
+            {
+                AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+                AlertDialog alertDialog = builder.Create();
+                alertDialog.SetTitle("Czy chcesz usun¹æ produkt z koszyka?");
+                alertDialog.SetMessage(mItems[position].Name + "\nCena: " + mItems[position].Price);
+                alertDialog.SetButton2("Tak", (s, ev) => { Kosz.Del_produkt(mItems[position]); NotifyDataSetChanged(); alertDialog.Cancel(); });
+                alertDialog.SetButton("Nie", (s, ev) => { alertDialog.Cancel(); });
+                alertDialog.Show();
+            }
+            catch
+            {
+                NotifyDataSetChanged();
+            }
         }
         protected void R_l_Oferta(int position)
         {
             Set_Text(mItems[position].Name, row.FindViewById<TextView>(Resource.Id.txtNazwa));
             Set_Text(mItems[position].Price, row.FindViewById<TextView>(Resource.Id.txtCena));
             Set_Text(mItems[position].Description, row.FindViewById<TextView>(Resource.Id.txtOpis));
-            Set_Text(mItems[position].PictureUrl, row.FindViewById<TextView>(Resource.Id.txtDokladnosc));
             Set_Image(mItems[position].PictureUrl, row.FindViewById<ImageView>(Resource.Id.ImageProdukt));
         }
         protected void R_l_Koszyk(int position)

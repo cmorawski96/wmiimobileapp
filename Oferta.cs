@@ -38,6 +38,7 @@ namespace projekt
             #endregion//******************************
 
             #region testy
+            
              //Do testow listy
                mItems = new List<Produkt>();
                mItems.Add(new Produkt("koszulka", 2, "KOLOROWA", null));
@@ -49,28 +50,15 @@ namespace projekt
                mItems.Add(new Produkt("glowa6", 3, "Pusta", null));
                
             MyViewAdapter adapter = new MyViewAdapter(this, mItems, Resource.Layout.Oferta);
+            
             #endregion
-            //MyViewAdapter adapter = new MyViewAdapter(this, lista.listaP);
+            //MyViewAdapter adapter = new MyViewAdapter(this, lista.listaP, Resource.Layout.Oferta);
         
             mListView.Adapter = adapter;
             #endregion
             
-           //mListView.ItemClick += kliknij_okienko;
-           // mListView.Click += delegate { kliknij_okienko; };
+          
             // Create your application here
-        }
-        
-        public void kliknij_okienko(object sender, AdapterView.ItemClickEventArgs e)
-        {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            AlertDialog alertDialog = builder.Create();
-            alertDialog.SetTitle("Czy chcesz dodaæ produkt do koszyka?");
-            alertDialog.SetMessage(mItems[e.Position].Name + "\nCena: " + mItems[e.Position].Price);
-            alertDialog.SetButton2("Tak", (s, ev) => { Kosz.lista.Add(mItems[e.Position]); alertDialog.Cancel(); });
-            alertDialog.SetButton("Nie", (s, ev) => { alertDialog.Cancel(); });
-            alertDialog.Show();
-        }
-        /* Do testow listy */
-
+        }        
     }
 }

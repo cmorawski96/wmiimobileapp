@@ -3,35 +3,43 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ImageView
-        android:src="@android:drawable/ic_menu_gallery"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/ImageProdukt" />
-    <TextView
-        android:text="Text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtNazwa" />
-    <TextView
-        android:text="Text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtCena" />
-    <TextView
-        android:text="Text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtOpis" />
-    <TextView
-        android:text="Text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtDokladnosc" />
-    <Button
-        android:text="Dodaj do koszyka"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Dodaj_do_koszyka"
-        android:visibility="gone" />
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout1">
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:id="@+id/ImageProdukt"
+            android:layout_width="167.5dp"
+            android:layout_height="119.5dp"
+            android:layout_below="@id/ImageProdukt"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:text="nazwa"
+            android:id="@+id/txtNazwa"
+            android:layout_width="142.0dp"
+            android:layout_height="46.0dp"
+            android:layout_toRightOf="@id/ImageProdukt" />
+        <TextView
+            android:text="cena"
+            android:id="@+id/txtCena"
+            android:layout_width="79.0dp"
+            android:layout_height="40.5dp"
+            android:layout_toRightOf="@id/txtNazwa" />
+        <TextView
+            android:text="Text"
+            android:id="@+id/txtOpis"
+            android:layout_width="match_parent"
+            android:layout_height="83.5dp"
+            android:layout_below="@id/txtNazwa"
+            android:layout_toRightOf="@id/ImageProdukt" />
+        <Button
+            android:text="Dodaj do koszyka"
+            android:id="@+id/Dodaj_do_koszyka"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ImageProdukt" />
+    </RelativeLayout>
 </LinearLayout>

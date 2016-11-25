@@ -30,7 +30,7 @@ namespace projekt
                 List<Produkt> listProdukt = SimpleJson.DeserializeObject<List<Produkt>>(content);
                 listaP.AddRange(listProdukt);
             }
-            catch (Exception e)
+            catch
             {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 AlertDialog alertDialog = builder.Create();

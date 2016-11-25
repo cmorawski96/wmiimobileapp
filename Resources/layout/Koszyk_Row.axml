@@ -5,24 +5,39 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-    <TextView
-        android:text="Text"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/kosz_name" />
-    <TextView
-        android:text="Text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/kosz_cena" />
-    <TextView
-        android:text="Text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/kosz_opis" />
-    <ImageView
-        android:src="@android:drawable/ic_menu_gallery"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/kosz_obraz" />
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout1">
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:id="@+id/kosz_obraz"
+            android:layout_width="113.0dp"
+            android:layout_height="72.0dp" />
+        <TextView
+            android:text="nazwa"
+            android:id="@+id/kosz_name"
+            android:layout_width="145.0dp"
+            android:layout_height="34.5dp"
+            android:layout_toRightOf="@id/kosz_obraz" />
+        <TextView
+            android:text="cena"
+            android:id="@+id/kosz_cena"
+            android:layout_width="117.0dp"
+            android:layout_height="29.5dp"
+            android:layout_toRightOf="@id/kosz_name" />
+        <TextView
+            android:text="Text"
+            android:id="@+id/kosz_opis"
+            android:layout_width="match_parent"
+            android:layout_height="44.0dp"
+            android:layout_below="@id/kosz_name"
+            android:layout_toRightOf="@id/kosz_obraz" />
+        <Button
+            android:text="Usuń produkt"
+            android:layout_width="match_parent"
+            android:layout_height="51.5dp"
+            android:layout_below="@id/kosz_obraz"
+            android:id="@+id/kosz_del" />
+    </RelativeLayout>
 </LinearLayout>

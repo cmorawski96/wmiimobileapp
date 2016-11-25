@@ -15,6 +15,7 @@ namespace projekt
     [Activity(Label = "Koszyk")]
     public class Koszyk : Activity
     {
+        protected TextView text_suma;
         private ListView mListView;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -24,29 +25,34 @@ namespace projekt
             mListView = FindViewById<ListView>(Resource.Id.kosz_listview);
             MyViewAdapter adapter = new MyViewAdapter(this, Kosz.lista, Resource.Layout.Koszyk);
             mListView.Adapter = adapter;
+            
             #region cos
-            /*
-            TextView kosz_1 = FindViewById<TextView>(Resource.Id.kosz_name);
-            if(Kosz.czy_pusty())
-            {
-                kosz_1.Text = Kosz.return_name(0);
-            }
-            else
-            {
-                kosz_1.Text = "pusto";
-            }
-            */
+            Button zatwierc = FindViewById<Button>(Resource.Id.kosz_zatwierc);
+            text_suma = FindViewById<TextView>(Resource.Id.kosz_cena);
+            text_suma.Text = "Razem : " + Kosz.suma;
             #endregion
+            
             // Create your application here
         }
+
     }
 
     public static class Kosz
     {
+        public static decimal suma;
         public static List<Produkt> lista = new List<Produkt>();
+      //  public static Button przycisk = (Button)(Resource.Id.)
         public static void Add_produkt(Produkt produkt)
         {
             lista.Add(produkt);
+            suma += produkt.Price;
+
+        }
+        public static void Del_produkt(Produkt produkt)
+        {
+            suma -= produkt.Price;
+            lista.Remove(produkt);
+            text_suma
         }
         public static bool czy_pusty()
         {
@@ -59,6 +65,9 @@ namespace projekt
         {
             return lista[position].Name;
         }
-             
+        public static void Set_Sum(Button przycisk)
+        {
+            przycisk.Text = "Suma: " + suma;
+        }
     }
 }
