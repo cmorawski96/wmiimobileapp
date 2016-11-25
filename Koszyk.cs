@@ -22,7 +22,7 @@ namespace projekt
             SetContentView(Resource.Layout.Koszyk);
             Context context = this;
             mListView = FindViewById<ListView>(Resource.Id.kosz_listview);
-            MyFirstViewAdapter adapter = new MyFirstViewAdapter(this, Kosz.lista, Resource.Layout.Koszyk);
+            MyViewAdapter adapter = new MyViewAdapter(this, Kosz.lista, Resource.Layout.Koszyk);
             mListView.Adapter = adapter;
             #region cos
             /*

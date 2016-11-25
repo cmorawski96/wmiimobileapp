@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Koszyk.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MyAdapterView.cs" />
     <Compile Include="Oferta.cs" />
     <Compile Include="Panel_Menu.cs" />
     <Compile Include="Produkt.cs" />
