@@ -21,13 +21,14 @@
         <TextView
             android:text="nazwa"
             android:id="@+id/kosz_name"
-            android:layout_width="171.0dp"
+            android:layout_width="132.0dp"
             android:layout_height="28.5dp"
-            android:layout_toRightOf="@id/kosz_obraz" />
+            android:layout_toRightOf="@id/kosz_obraz"
+            android:layout_marginRight="0.0dp" />
         <TextView
             android:text="Text"
             android:id="@+id/kosz_opis"
-            android:layout_width="174.0dp"
+            android:layout_width="134.0dp"
             android:layout_height="35.5dp"
             android:layout_below="@id/kosz_name"
             android:layout_toRightOf="@id/kosz_obraz" />

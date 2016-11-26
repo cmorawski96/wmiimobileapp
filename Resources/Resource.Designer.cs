@@ -26,6 +26,9 @@ namespace projekt
 		
 		public static void UpdateIdValues()
 		{
+			global::ZXing.Mobile.Resource.Id.contentFrame = global::projekt.Resource.Id.contentFrame;
+			global::ZXing.Mobile.Resource.Layout.zxingscanneractivitylayout = global::projekt.Resource.Layout.zxingscanneractivitylayout;
+			global::ZXing.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::projekt.Resource.Layout.zxingscannerfragmentlayout;
 		}
 		
 		public partial class Attribute
@@ -69,6 +72,9 @@ namespace projekt
 			// aapt resource value: 0x7f050008
 			public const int ImageProdukt = 2131034120;
 			
+			// aapt resource value: 0x7f050010
+			public const int Skanuj = 2131034128;
+			
 			// aapt resource value: 0x7f050018
 			public const int Wyslij_zamowienie = 2131034136;
 			
@@ -81,11 +87,14 @@ namespace projekt
 			// aapt resource value: 0x7f050015
 			public const int button_oferta = 2131034133;
 			
+			// aapt resource value: 0x7f050019
+			public const int contentFrame = 2131034137;
+			
+			// aapt resource value: 0x7f050011
+			public const int editKod = 2131034129;
+			
 			// aapt resource value: 0x7f05000e
 			public const int editText1 = 2131034126;
-			
-			// aapt resource value: 0x7f050010
-			public const int editText2 = 2131034128;
 			
 			// aapt resource value: 0x7f050014
 			public const int imageView1 = 2131034132;
@@ -114,9 +123,6 @@ namespace projekt
 			// aapt resource value: 0x7f050013
 			public const int listaProdukt = 2131034131;
 			
-			// aapt resource value: 0x7f050012
-			public const int progressBar1 = 2131034130;
-			
 			// aapt resource value: 0x7f050003
 			public const int relativeLayout1 = 2131034115;
 			
@@ -135,8 +141,8 @@ namespace projekt
 			// aapt resource value: 0x7f05000b
 			public const int txtOpis = 2131034123;
 			
-			// aapt resource value: 0x7f050011
-			public const int zaloguj = 2131034129;
+			// aapt resource value: 0x7f050012
+			public const int zaloguj = 2131034130;
 			
 			static Id()
 			{
@@ -168,6 +174,12 @@ namespace projekt
 			
 			// aapt resource value: 0x7f030005
 			public const int Panel_Menu = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int zxingscanneractivitylayout = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int zxingscannerfragmentlayout = 2130903047;
 			
 			static Layout()
 			{
