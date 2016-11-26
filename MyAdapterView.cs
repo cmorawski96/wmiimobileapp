@@ -36,29 +36,18 @@ namespace projekt
         }
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            row = convertView;
+            row = null;
             if (MResource == Resource.Layout.Oferta)
             {
                 if (row == null)
                 {
-                    row = LayoutInflater.From(mContext).Inflate(Resource.Layout.ListProdukt_Row, null, false);
+                    row = LayoutInflater.From(mContext).Inflate(Resource.Layout.ListProdukt_Row, parent, false);
+                }
+                R_l_Oferta(position);
+                Button przycisk = row.FindViewById<Button>(Resource.Id.Dodaj_do_koszyka);
+                przycisk.Visibility = ViewStates.Visible;
+                przycisk.Click += delegate { Okienko_Dodaj(position); };
 
-                    R_l_Oferta(position);
-                    Button przycisk = row.FindViewById<Button>(Resource.Id.Dodaj_do_koszyka);
-                    przycisk.Visibility = ViewStates.Gone;
-                    przycisk.Click += delegate { Okienko_Dodaj(position); };
-                    row.Click += delegate
-                    {
-                        if (przycisk.Visibility == ViewStates.Gone)
-                        {
-                            przycisk.Visibility = ViewStates.Visible;
-                        }
-                        else
-                        {
-                            przycisk.Visibility = ViewStates.Gone;
-                        }
-                    };
-                }                  
             }
             else if (MResource == Resource.Layout.Koszyk)
             {
@@ -67,14 +56,18 @@ namespace projekt
                     row = LayoutInflater.From(mContext).Inflate(Resource.Layout.Koszyk_Row, null, false);
                     R_l_Koszyk(position);
                     Button przycisk = row.FindViewById<Button>(Resource.Id.kosz_del);
-                    przycisk.Click += delegate{ Okienko_Usun(position); };
+
+                    przycisk.Click += delegate { Okienko_Usun(position); };
                     
                 }
             }
-           
+
             return row;
 
         }
+
+
+
         protected void Set_Text(object text, TextView textview)
         {
             textview.Text = Convert.ToString(text);
