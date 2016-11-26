@@ -10,11 +10,13 @@
         <ImageView
             android:src="@android:drawable/ic_menu_gallery"
             android:id="@+id/ImageProdukt"
-            android:layout_width="167.5dp"
-            android:layout_height="119.5dp"
+            android:layout_width="170dp"
+            android:layout_height="120dp"
             android:layout_below="@id/ImageProdukt"
             android:layout_centerHorizontal="true"
-            android:layout_alignParentLeft="true" />
+            android:layout_alignParentLeft="true"
+            android:maxHeight="120dp"
+            android:maxWidth="170dp" />
         <TextView
             android:text="nazwa"
             android:id="@+id/txtNazwa"

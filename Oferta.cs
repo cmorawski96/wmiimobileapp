@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using System.Threading;
 
 namespace projekt
 {
@@ -53,7 +54,7 @@ namespace projekt
 
             #endregion
             //MyViewAdapter adapter = new MyViewAdapter(this, lista.listaP, Resource.Layout.Oferta);
-
+            
             mListView.Adapter = adapter;
             #endregion
 

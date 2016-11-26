@@ -69,11 +69,11 @@ namespace projekt
 			// aapt resource value: 0x7f050008
 			public const int ImageProdukt = 2131034120;
 			
-			// aapt resource value: 0x7f050014
-			public const int button_koszyk = 2131034132;
+			// aapt resource value: 0x7f050015
+			public const int button_koszyk = 2131034133;
 			
-			// aapt resource value: 0x7f050013
-			public const int button_oferta = 2131034131;
+			// aapt resource value: 0x7f050014
+			public const int button_oferta = 2131034132;
 			
 			// aapt resource value: 0x7f05000e
 			public const int editText1 = 2131034126;
@@ -102,8 +102,11 @@ namespace projekt
 			// aapt resource value: 0x7f050002
 			public const int kosz_zatwierc = 2131034114;
 			
+			// aapt resource value: 0x7f050013
+			public const int listaProdukt = 2131034131;
+			
 			// aapt resource value: 0x7f050012
-			public const int listaProdukt = 2131034130;
+			public const int progressBar1 = 2131034130;
 			
 			// aapt resource value: 0x7f050003
 			public const int relativeLayout1 = 2131034115;

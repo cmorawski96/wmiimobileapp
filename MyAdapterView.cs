@@ -3,6 +3,8 @@ using Android.Content;
 using Android.Graphics;
 using Android.Views;
 using Android.Widget;
+using Java.IO;
+using Java.Net;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -45,8 +47,9 @@ namespace projekt
                 }
                 R_l_Oferta(position);
                 Button przycisk = row.FindViewById<Button>(Resource.Id.Dodaj_do_koszyka);
-                przycisk.Visibility = ViewStates.Visible;
+                przycisk.Visibility = ViewStates.Gone;
                 przycisk.Click += delegate { Okienko_Dodaj(position); };
+                row.Click += delegate { if (przycisk.Visibility == ViewStates.Gone){ przycisk.Visibility = ViewStates.Visible; } else { przycisk.Visibility = ViewStates.Gone; } };
 
             }
             else if (MResource == Resource.Layout.Koszyk)
@@ -77,20 +80,23 @@ namespace projekt
             if (url != null)
             {
                 Bitmap imageBitmap = null;
-                using (var webClient = new WebClient())
+                try
                 {
-                    
-                  
+                    using (var webClient = new WebClient())
+                    {
                         var imageBytes = webClient.DownloadData(url);
                         if (imageBytes != null && imageBytes.Length > 0)
                         {
-                            imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
+                            imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);                        
                             imageview.SetImageBitmap(imageBitmap);
                         }
-                    
-                }
+                    }
+                }catch { }   
+                
             }
         }
+
+
         protected void Okienko_Dodaj(int position)
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
