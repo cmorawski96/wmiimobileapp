@@ -5,14 +5,29 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
+    <ImageView
+        android:src="@drawable/rwss"
+        android:layout_width="match_parent"
+        android:layout_height="254.0dp"
+        android:id="@+id/imageView1" />
     <Button
         android:text="Oferta"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="64.0dp"
         android:id="@+id/button_oferta" />
     <Button
         android:text="Koszyk"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="71.5dp"
         android:id="@+id/button_koszyk" />
+    <Button
+        android:text="Zmień dane osobowe"
+        android:layout_width="match_parent"
+        android:layout_height="66.5dp"
+        android:id="@+id/Zmien_dane" />
+    <Button
+        android:text="Wyślij zamówienie"
+        android:layout_width="match_parent"
+        android:layout_height="62.5dp"
+        android:id="@+id/Wyslij_zamowienie" />
 </LinearLayout>

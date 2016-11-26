@@ -42,7 +42,7 @@ namespace projekt
 
             //Do testow listy
             mItems = new List<Produkt>();
-            mItems.Add(new Produkt("koszulka", 2, "KOLOROWA", "https://www.google.pl/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwix5qj1ysTQAhWMFywKHdpDAAkQjRwIBw&url=http%3A%2F%2Fpics-about-space.com%2Fspacecraft-3d-android%3Fp%3D1&bvm=bv.139782543,d.bGg&psig=AFQjCNHWcnwQO1tlKsX3qULRmKEUgZT0AQ&ust=1480186597062625"));
+            mItems.Add(new Produkt("koszulka", 2, "KOLOROWA", null));
             mItems.Add(new Produkt("glowa1", 3, "Pusta", null));
             mItems.Add(new Produkt("noga", 3, "Pusta", null));
             mItems.Add(new Produkt("szyja", 3, "Pusta", null));

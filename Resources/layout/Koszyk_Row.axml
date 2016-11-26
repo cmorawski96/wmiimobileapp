@@ -13,7 +13,7 @@
             android:src="@android:drawable/ic_menu_gallery"
             android:id="@+id/kosz_obraz"
             android:layout_width="115.0dp"
-            android:layout_height="72.0dp"
+            android:layout_height="79.0dp"
             android:minHeight="72.0dp"
             android:maxWidth="115.0dp"
             android:maxHeight="72.0dp"
@@ -21,27 +21,31 @@
         <TextView
             android:text="nazwa"
             android:id="@+id/kosz_name"
-            android:layout_width="145.0dp"
-            android:layout_height="34.5dp"
+            android:layout_width="171.0dp"
+            android:layout_height="28.5dp"
             android:layout_toRightOf="@id/kosz_obraz" />
-        <TextView
-            android:text="cena"
-            android:id="@+id/kosz_cena"
-            android:layout_width="117.0dp"
-            android:layout_height="29.5dp"
-            android:layout_toRightOf="@id/kosz_name" />
         <TextView
             android:text="Text"
             android:id="@+id/kosz_opis"
-            android:layout_width="match_parent"
-            android:layout_height="44.0dp"
+            android:layout_width="174.0dp"
+            android:layout_height="35.5dp"
             android:layout_below="@id/kosz_name"
             android:layout_toRightOf="@id/kosz_obraz" />
         <Button
             android:text="Usuń produkt"
-            android:layout_width="match_parent"
-            android:layout_height="51.5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="80.5dp"
             android:layout_below="@id/kosz_obraz"
-            android:id="@+id/kosz_del" />
+            android:id="@+id/kosz_del"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/kosz_name"
+            android:layout_alignParentTop="true" />
+        <TextView
+            android:text="cena"
+            android:id="@+id/kosz_cena"
+            android:layout_width="97.0dp"
+            android:layout_height="19.5dp"
+            android:layout_toRightOf="@id/kosz_obraz"
+            android:layout_below="@id/kosz_opis" />
     </RelativeLayout>
 </LinearLayout>
