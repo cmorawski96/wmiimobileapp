@@ -45,6 +45,7 @@ namespace projekt
                 {
                     row = LayoutInflater.From(mContext).Inflate(Resource.Layout.ListProdukt_Row, parent, false);
                 }
+                row = (View)Resource.Layout.Koszyk;
                 R_l_Oferta(position);
                 Button przycisk = row.FindViewById<Button>(Resource.Id.Dodaj_do_koszyka);
                 przycisk.Visibility = ViewStates.Gone;
@@ -59,7 +60,7 @@ namespace projekt
                     row = LayoutInflater.From(mContext).Inflate(Resource.Layout.Koszyk_Row, null, false);
                     R_l_Koszyk(position);
                     Button przycisk = row.FindViewById<Button>(Resource.Id.kosz_del);
-
+                    row = (View)Resource.Layout.Koszyk;
                     przycisk.Click += delegate { Okienko_Usun(position); };
                     
                 }

@@ -26,9 +26,6 @@ namespace projekt
 		
 		public static void UpdateIdValues()
 		{
-			global::ZXing.Mobile.Resource.Id.contentFrame = global::projekt.Resource.Id.contentFrame;
-			global::ZXing.Mobile.Resource.Layout.zxingscanneractivitylayout = global::projekt.Resource.Layout.zxingscanneractivitylayout;
-			global::ZXing.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::projekt.Resource.Layout.zxingscannerfragmentlayout;
 		}
 		
 		public partial class Attribute
@@ -86,9 +83,6 @@ namespace projekt
 			
 			// aapt resource value: 0x7f050015
 			public const int button_oferta = 2131034133;
-			
-			// aapt resource value: 0x7f050019
-			public const int contentFrame = 2131034137;
 			
 			// aapt resource value: 0x7f050011
 			public const int editKod = 2131034129;
@@ -174,12 +168,6 @@ namespace projekt
 			
 			// aapt resource value: 0x7f030005
 			public const int Panel_Menu = 2130903045;
-			
-			// aapt resource value: 0x7f030006
-			public const int zxingscanneractivitylayout = 2130903046;
-			
-			// aapt resource value: 0x7f030007
-			public const int zxingscannerfragmentlayout = 2130903047;
 			
 			static Layout()
 			{
