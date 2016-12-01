@@ -25,9 +25,14 @@ namespace projekt
             var request = new RestRequest("api/Products", Method.GET);
             IRestResponse response = client.Execute(request);
             var content = response.Content;
+            if(content != null)
+            {
+                content = null;
+            }
             try
             {
                 List<Produkt> listProdukt = SimpleJson.DeserializeObject<List<Produkt>>(content);
+                
                 listaP.AddRange(listProdukt);
             }
             catch

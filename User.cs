@@ -18,5 +18,10 @@ namespace projekt
         string nawisko { get; }
         string nralbumu { get; }
         string kodkreskowy { get; }
+
+        private User()
+        {
+            User user = new User();
+        }
     }
 }
